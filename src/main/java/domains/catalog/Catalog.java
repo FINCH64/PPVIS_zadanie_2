@@ -24,27 +24,27 @@ public abstract class Catalog {
         document.setCurrCatalog(this);
     }
 
-    public String getName() {
+    public synchronized String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public synchronized void setName(String name) {
         this.name = name;
     }
 
-    public Set<Document> getDocuments() {
+    public synchronized Set<Document> getDocuments() {
         return documents;
     }
 
-    public void setDocuments(Set<Document> documents) {
+    public synchronized void setDocuments(Set<Document> documents) {
         this.documents = documents;
     }
 
-    public List<Catalog> getSubCatalogs() {
+    public synchronized List<Catalog> getSubCatalogs() {
         return subCatalogs;
     }
 
-    public void setSubCatalogs(List<Catalog> subCatalogs) {
+    public synchronized void setSubCatalogs(List<Catalog> subCatalogs) {
         this.subCatalogs = subCatalogs;
     }
 
