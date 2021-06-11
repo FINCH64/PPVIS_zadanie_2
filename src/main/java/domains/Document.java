@@ -33,35 +33,35 @@ public class Document {
         return Objects.hash(header);
     }
 
-    public String getHeader() {
+    public synchronized String getHeader() {
         return header;
     }
 
-    public void setHeader(String header) {
+    public synchronized void setHeader(String header) {
         this.header = header;
     }
 
-    public LocalDateTime getCreationDate() {
+    public synchronized LocalDateTime getCreationDate() {
         return creationDate;
     }
 
-    public String getAuthor() {
+    public synchronized String getAuthor() {
         return author;
     }
 
-    public String getText() {
+    public synchronized String getText() {
         return text;
     }
 
-    public void setText(String text) {
+    public synchronized void setText(String text) {
         this.text = text;
     }
 
-    public Catalog getCurrCatalog() {
+    public synchronized Catalog getCurrCatalog() {
         return currCatalog;
     }
 
-    public void setCurrCatalog(Catalog currCatalog) {
+    public synchronized void setCurrCatalog(Catalog currCatalog) {
         this.currCatalog = currCatalog;
     }
 }
